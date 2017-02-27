@@ -20,8 +20,8 @@ public class SpringApiServerApplication implements CommandLineRunner {
 	@Override
 	public void run(String... strings) throws Exception {
 
-		customerRepository.save(new Customer("Lyndon", "Bibera"));
-		customerRepository.save(new Customer("Lelouch", "Lamperouge"));
+		//customerRepository.save(new Customer("Lyndon", "Bibera"));
+		//customerRepository.save(new Customer("Lelouch", "Lamperouge"));
 
 	}
 }
