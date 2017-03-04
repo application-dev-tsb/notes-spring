@@ -20,6 +20,9 @@ public class UISecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers("/index.html", "/home.html", "/login.html", "/").permitAll()
                 .anyRequest().authenticated()
                 .and()
-                .csrf().csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse());
+                .csrf().csrfTokenRepository(
+                        /* magically sets the XSRF-TOKEN cookie */
+                        CookieCsrfTokenRepository.withHttpOnlyFalse()
+        );
     }
 }
