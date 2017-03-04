@@ -1,6 +1,7 @@
+server:
+  port: 9000
+
 security:
-  user.name: user
-  user.password: password
   sessions: never
 
 spring:

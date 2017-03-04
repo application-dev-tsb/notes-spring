@@ -1,4 +1,4 @@
-package com.example;
+package com.practice.spring.spasecurity.resource;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
