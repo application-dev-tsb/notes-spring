@@ -1,4 +1,4 @@
-package com.example;
+package com.practice.spring.spasecurity.ui;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
