@@ -1,5 +1,7 @@
 package com.practice.spring.spasecurity.ui.controller;
 
+import java.security.Principal;
+
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -16,6 +18,11 @@ public class ResourceController {
         model.put("id", UUID.randomUUID().toString());
         model.put("content", "Hello World");
         return model;
+    }
+
+    @RequestMapping("/user")
+    public Principal user(Principal user) {
+        return user;
     }
 
 }
