@@ -1,5 +1,5 @@
 # Spring
-The best application framework for server-side developement
+The best application framework for server-side development
 
 ## REST
 - Spring HATEOAS
