@@ -10,6 +10,7 @@ The best application framework for server-side development
 - Spring and SOAP
 
 ## Security
+- Spring Security Basic
 - Spring Security with OAuth2
 
 ## Service Layer
