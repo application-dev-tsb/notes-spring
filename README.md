@@ -18,6 +18,8 @@
 ## Integration
 - Spring and Scheduling Tasks
 - Spring and JMS
+- Spring and GCP Services
+- Spring and AWS Services
 
 ## Data Access
 - Spring and Mongo
