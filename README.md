@@ -1,7 +1,7 @@
 # Spring
 The best application framework for server-side development
 
-## REST
+## API
 - Spring HATEOAS
 - REST Docs
 - Spring and Angular
