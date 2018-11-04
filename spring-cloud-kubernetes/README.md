@@ -1,5 +1,5 @@
 # Spring Boot and Kubernetes
-Here we are going to use create a simple microservice application that uses the spring-cloud and kubernetes
+Here we are going to use create a simple microservice application that uses the spring-cloud and kubernetes. I am testing out the waters for the feasibility of GCP's Kubernetes Engine for my project: [Kwler.NET](https://github.com/kwler)
 
 The following dependencies will be used:
 
