@@ -15,17 +15,20 @@ The following dependencies will be used:
 For the sake of demonstration, imagine a simple system:
 - API: exposed to the outside world, ideally a frontend
 - Controller: polls the database for certain work to be done
-- Worker: Comes and goes, gets killed when no work needs to be done
+- Worker: Comes and goes, gets killed when no work needs to be done, performs a unit of work, then dumps the result in the queue
 - Database: A Postgres database tha we will initially include in the kubernetes cluster, we will throw this away when we go to prod 
 ```
 Mini Architecture:
-                                    |-------------> Worker
-API ---------> [Database] <-----Controller -------> Worker
-                                    |-------------> Worker
+
+                                    Kubernetes (controls the number of workers)
+                                       |
+                                       |               |--------------> Worker1
+API ---------> [Database] <-----Controller <--------> [Queue] <-------> Worker2
+                                                       |--------------> WorkerX
 ```
 
 #### Roadmap
-If you fail to plan, you plan to fail.
+*If you fail to plan, you plan to fail.* -
 - [ ] Deploy a Postgres Image on the local cluster, match GCP's Cloud SQL version for Postgres
 - [ ] Deploy a Spring Data + REST Repository Spring Boot Application (API)
 - [ ] Expose API locally and try out some test entities using an embedded database
@@ -34,6 +37,7 @@ If you fail to plan, you plan to fail.
 - [ ] Connect to a Google Cloud SQL instance
 - [ ] Automate GCP resource creation and termination
 - [ ] Implement CI/CD
+- [ ] Implement Controller
 
 #### Resources
 - [Github: Spring Cloud Kubernetes](https://github.com/spring-cloud/spring-cloud-kubernetes)
