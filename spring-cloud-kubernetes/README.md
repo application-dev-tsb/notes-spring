@@ -38,6 +38,14 @@ API ---------> [Database] <-----Controller <--------> [Queue] <-------> Worker2
 - [ ] Automate GCP resource creation and termination
 - [ ] Implement CI/CD
 - [ ] Implement Controller
+- [ ] Implement Worker
+- [ ] Integrate worker-controller
+
+#### Learning Goals
+- [ ] Scaling: from zero to 60, and vice-versa
+- [ ] Resiliency: figure out the behaviour of spring apps when faced with accidental terminations
+- [ ] Automation: how to automate complicated systems, from deployment to rollbacks, with ideally zero downtime
+- [ ] API evolution: avoiding issues with updated APIs of system dependencies
 
 #### Resources
 - [Github: Spring Cloud Kubernetes](https://github.com/spring-cloud/spring-cloud-kubernetes)
