@@ -28,7 +28,7 @@ API ---------> [Database] <-----Controller <--------> [Queue] <-------> Worker2
 ```
 
 #### Roadmap
-*If you fail to plan, you plan to fail.* -L.Bibera, Architect
+*If you fail to plan, you plan to fail.* -L.Bibera, Solutions Architect
 - [ ] Deploy a Postgres Image on the local cluster, match GCP's Cloud SQL version for Postgres
 - [ ] Deploy a Spring Data + REST Repository Spring Boot Application (API)
 - [ ] Expose API locally and try out some test entities using an embedded database
