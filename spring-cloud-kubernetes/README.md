@@ -14,7 +14,7 @@ The following dependencies will be used:
 #### Architecture of the Dummy System
 For the sake of demonstration, imagine a simple system:
 - API: exposed to the outside world, ideally a frontend
-- Controller: polls the database for certain work to be done
+- Controller: polls the database for certain work to be done, use [Spring Cloud DataFlow](https://cloud.spring.io/spring-cloud-dataflow/) to orchestrate workers
 - Worker: Comes and goes, gets killed when no work needs to be done, performs a unit of work, then dumps the result in the queue
 - Database: A Postgres database tha we will initially include in the kubernetes cluster, we will throw this away when we go to prod 
 ```
@@ -37,7 +37,7 @@ API ---------> [Database] <-----Controller <--------> [Queue] <-------> Worker2
 - [ ] Connect to a Google Cloud SQL instance
 - [ ] Automate GCP resource creation and termination
 - [ ] Implement CI/CD
-- [ ] Implement Controller
+- [ ] Implement Controller using [Spring Cloud Dataflow](https://cloud.spring.io/spring-cloud-dataflow/)
 - [ ] Implement Worker
 - [ ] Integrate worker-controller
 
