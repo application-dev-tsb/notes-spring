@@ -1,5 +1,5 @@
 # Spring
-The best application framework for server-side development
+The pinnacle of software engineering. The ultimate middleware framework.
 
 ## API
 - Spring REST
