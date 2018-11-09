@@ -25,3 +25,5 @@ An alternative way of deploying SCDF using a Helm chart
 
 ## Deploying Streams and Tasks
 - TODO
+#### Resources
+- [Built-in SCDF Components](https://docs.spring.io/spring-cloud-dataflow-server-kubernetes/docs/current/reference/htmlsingle/#applications)
