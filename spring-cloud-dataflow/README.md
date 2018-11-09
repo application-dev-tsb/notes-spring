@@ -12,6 +12,7 @@ Microservice flow control for streaming or long-running jobs.
 - [Skipper](https://github.com/zalando/skipper): routing resources, SPDF leverages this to perform upgrades and rollbacks
 
 ## SCDF Deployment Steps
+Deploying SCDF the hard way. Nothing comes easy, I would recommend this for newbies to give them a better understanding of the nuts and bolts needed for setting up the SCDF cluster
 - [ ] Deploy message broker
 - [ ] Deploy database
 - [ ] Deploy Redis
