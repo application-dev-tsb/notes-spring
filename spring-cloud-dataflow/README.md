@@ -8,8 +8,8 @@ Microservice flow control for streaming or long-running jobs.
 - [SCDF Kubernetes](https://docs.spring.io/spring-cloud-dataflow-server-kubernetes/docs/current/reference/htmlsingle/#kubernetes-getting-started)
 
 #### Other Technologies Involved
-- [Helm](https://docs.spring.io/spring-cloud-dataflow-server-kubernetes/docs/current/reference/htmlsingle/#kubernetes-getting-started)
-- [Skipper](https://github.com/zalando/skipper)
+- [Helm](https://github.com/helm/helm)/[Charts](https://github.com/helm/charts): preconfigured Kubernetes resources
+- [Skipper](https://github.com/zalando/skipper): routing resources
 
 #### Workflow
 - Create task or stream processor (unless its one of the built-in ones)
