@@ -11,17 +11,17 @@ Microservice flow control for streaming or long-running jobs.
 - [Helm](https://github.com/helm/helm)/[Charts](https://github.com/helm/charts): preconfigured Kubernetes resources
 - [Skipper](https://github.com/zalando/skipper): routing resources, SPDF leverages this to perform upgrades and rollbacks
 
-#### SCDF Deployment Steps
+## SCDF Deployment Steps
 - [ ] Deploy message broker
 - [ ] Deploy database
 - [ ] Deploy Redis
 - [ ] Deploy Skipper
 - [ ] Deploy the SCDF Server
 
-#### SCDF Deployment Steps (Alternative with Helm)
+## SCDF Deployment Steps (Alternative with Helm)
 An alternative way of deploying SCDF using a Helm chart
 - [ ] Install Helm
 - [ ] Add SCDF incubator
 
-#### Deploying Streams and Tasks
+## Deploying Streams and Tasks
 - TODO
