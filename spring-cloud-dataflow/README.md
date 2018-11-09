@@ -9,7 +9,7 @@ Microservice flow control for streaming or long-running jobs.
 
 #### Other Technologies Involved
 - [Helm](https://github.com/helm/helm)/[Charts](https://github.com/helm/charts): preconfigured Kubernetes resources
-- [Skipper](https://github.com/zalando/skipper): routing resources
+- [Skipper](https://github.com/zalando/skipper): routing resources, SPDF leverages this to perform upgrades and rollbacks
 
 #### Workflow
 - Create task or stream processor (unless its one of the built-in ones)
