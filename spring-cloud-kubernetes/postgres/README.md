@@ -1,5 +1,15 @@
 # Postgres on Kubernetes
 
+## Deploy to Kubernetes
+```
+kubectl create -f postgres-configmap.yaml 
+kubectl create -f postgres-volume.yaml 
+kubectl create -f postgres-deployment.yaml 
+kubectl create -f postgres-service.yaml 
+kubectl create -f postgres-ingress.yaml 
+```
+
+## Run Postgres Locally
 - for demo purposes
 ```
 # -P, to expose the ports
