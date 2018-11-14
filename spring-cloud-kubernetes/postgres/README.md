@@ -2,15 +2,23 @@
 
 - for demo purposes
 ```
-docker run \
+# -P, to expose the ports
+# --rm, to remove the container after termination
+
+docker run -P --rm \
 -e POSTGRES_DB='postgresdb' \
 -e POSTGRES_USER='postgresadmin' \
 -e POSTGRES_PASSWORD='postgrespassword123' \
--p 5432:5432 \
+--name=postgres \
 postgres:10.4 
 ```
+- check the forwarded port
 ```
-psql postgresql://postgresadmin:postgrespassword123@localhost:5432/postgresdb
+docker port postgres
+```
+- connect
+```
+psql postgresql://postgresadmin:postgrespassword123@localhost:32775/postgresdb
 ```
 
 #### Resources
