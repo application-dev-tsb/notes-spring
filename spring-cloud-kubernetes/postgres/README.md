@@ -4,6 +4,7 @@
 ```
 # config
 kubectl create -f postgres-configmap.yaml 
+kubectl get configmap
 
 # disk
 kubectl create -f postgres-volume.yaml 
