@@ -28,7 +28,7 @@ API ---------> [Database] <-----Controller <--------> [Queue] <-------> Worker2
 ```
 
 #### Roadmap
-*If you fail to plan, you plan to fail.* -L.Bibera, Solutions Architect*
+*If you fail to plan, you plan to fail.* -L.Bibera, Solutions Architect
 
 - [ ] ~Deploy a Postgres Image on the local cluster, match GCP's Cloud SQL version for Postgres~
 - [x] Deploy a Postgres server from Google's Application Marketplace: [Docs](https://github.com/GoogleCloudPlatform/click-to-deploy/blob/master/k8s/postgresql/README.md)
