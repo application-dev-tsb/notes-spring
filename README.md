@@ -5,6 +5,7 @@ The pinnacle of software engineering. The ultimate middleware framework.
 - Spring REST
 - Spring HATEOAS
 - REST Docs
+- [SpringDoc Open API](https://springdoc.org/)
 - Spring and Angular
 - Spring and React
 - Spring and Ember
