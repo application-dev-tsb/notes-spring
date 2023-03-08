@@ -26,7 +26,7 @@ public class SQLOrderDatastore implements OrderDatastore {
         List<OrderItemRow> items = order.getItems().stream()
                 .map(OrderItemRow::from)
                 .map(it-> it.withOrderId(orderTable.getOrderId()))
-                .collect(Collectors.toList());
+                .toList();
 
         orderItemRowRepository.saveAll(items);
 
