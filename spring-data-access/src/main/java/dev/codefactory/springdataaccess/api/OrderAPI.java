@@ -4,6 +4,7 @@ import dev.codefactory.springdataaccess.core.entities.Order;
 import dev.codefactory.springdataaccess.core.ports.OrderDatastore;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,7 +19,7 @@ public class OrderAPI {
     private final OrderDatastore orderDatastore;
 
     @PostMapping
-    public Order createOrder(Order order) {
+    public Order createOrder(@RequestBody Order order) {
         return orderDatastore.create(order);
     }
 }

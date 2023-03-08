@@ -15,7 +15,7 @@ import java.util.UUID;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Table("order_entity")
+@Table("order")
 public class OrderRow {
 
     @Id

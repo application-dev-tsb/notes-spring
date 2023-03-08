@@ -23,12 +23,14 @@ public class SQLOrderDatastore implements OrderDatastore {
         OrderRow orderTable = OrderRow.from(order);
         var createdOrder = orderRowRepository.save(orderTable);
 
-        List<OrderItemRow> items = order.getItems().stream()
-                .map(OrderItemRow::from)
-                .map(it-> it.withOrderId(orderTable.getOrderId()))
-                .toList();
+        if (order.getItems()!=null && !order.getItems().isEmpty()) {
+            List<OrderItemRow> items = order.getItems().stream()
+                    .map(OrderItemRow::from)
+                    .map(it-> it.withOrderId(orderTable.getOrderId()))
+                    .toList();
 
-        orderItemRowRepository.saveAll(items);
+            orderItemRowRepository.saveAll(items);
+        }
 
         return createdOrder.toModel();
     }

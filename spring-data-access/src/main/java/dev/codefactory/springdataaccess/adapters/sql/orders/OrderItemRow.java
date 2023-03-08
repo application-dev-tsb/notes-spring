@@ -14,13 +14,13 @@ import java.util.UUID;
 @With
 @AllArgsConstructor
 @NoArgsConstructor
-@Table("order_item_entity")
+@Table("order_item")
 public class OrderItemRow {
 
     @Id
     private UUID orderItemId;
 
-    @Column("order_entity_id")
+    @Column("order_id")
     private UUID orderId;
 
     Integer sortPosition;

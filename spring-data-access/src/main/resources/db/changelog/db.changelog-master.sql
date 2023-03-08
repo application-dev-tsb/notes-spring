@@ -5,19 +5,19 @@
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 
 
-CREATE TABLE order_entity
+CREATE TABLE "order"
 (
-    order_entity_id UUID NOT NULL DEFAULT gen_random_uuid(),
+    order_id UUID NOT NULL DEFAULT gen_random_uuid(),
 
     description VARCHAR(255),
     total DECIMAL,
 
-    PRIMARY KEY(order_entity_id)
+    PRIMARY KEY(order_id)
 );
 
-CREATE TABLE order_item_entity
+CREATE TABLE order_item
 (
-    order_item_entity_id UUID NOT NULL DEFAULT gen_random_uuid(),
+    order_item_id UUID NOT NULL DEFAULT gen_random_uuid(),
     order_id UUID NOT NULL,
 
     sort_position INTEGER NOT NULL,
@@ -26,8 +26,8 @@ CREATE TABLE order_item_entity
     unit_price DECIMAL NOT NULL DEFAULT 0,
     amount DECIMAL NOT NULL DEFAULT 0,
 
-    PRIMARY KEY(order_item_entity_id),
-    CONSTRAINT fk_order_entity
+    PRIMARY KEY(order_item_id),
+    CONSTRAINT fk_order
         FOREIGN KEY(order_id)
-	    REFERENCES order_entity(order_entity_id)
+	    REFERENCES "order"(order_id)
 );
