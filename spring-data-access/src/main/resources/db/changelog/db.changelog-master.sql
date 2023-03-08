@@ -2,9 +2,12 @@
 
 --changeset codefactory:00000_initial_db
 --comment: initial database with order and order_item
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+
+
 CREATE TABLE order_entity
 (
-    order_entity_id UUID NOT NULL,
+    order_entity_id UUID NOT NULL DEFAULT gen_random_uuid(),
 
     description VARCHAR(255),
     total DECIMAL,
@@ -14,7 +17,7 @@ CREATE TABLE order_entity
 
 CREATE TABLE order_item_entity
 (
-    order_item_entity_id UUID NOT NULL,
+    order_item_entity_id UUID NOT NULL DEFAULT gen_random_uuid(),
     order_id UUID NOT NULL,
 
     sort_position INTEGER NOT NULL,
