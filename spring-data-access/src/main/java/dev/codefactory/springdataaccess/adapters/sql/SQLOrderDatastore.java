@@ -10,7 +10,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
-import java.util.stream.Collectors;
+import java.util.UUID;
 
 @RequiredArgsConstructor
 @Component
@@ -37,11 +37,18 @@ public class SQLOrderDatastore implements OrderDatastore {
 
     @Override
     public Order update(Order order) {
-        return null;
+        OrderRow asRow = OrderRow.from(order);
+        var updatedRow = orderRowRepository.save(asRow);
+
+        // TODO handle items
+
+        return updatedRow.toModel();
     }
 
     @Override
-    public Order findById(String id) {
-        return null;
+    public Order findById(UUID id) {
+        return orderRowRepository.findById(id)
+                .orElseThrow()
+                .toModel();
     }
 }
