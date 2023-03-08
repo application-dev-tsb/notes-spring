@@ -1,4 +1,4 @@
-package dev.codefactory.springdataaccess.adapters.postgres.orders;
+package dev.codefactory.springdataaccess.adapters.sql.orders;
 
 import dev.codefactory.springdataaccess.core.entities.OrderItem;
 import lombok.*;
@@ -15,12 +15,11 @@ import java.util.UUID;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table("order_item_entity")
-public class OrderItemEntity {
+public class OrderItemRow {
 
     @Id
     private UUID orderItemId;
 
-    @Id
     @Column("order_entity_id")
     private UUID orderId;
 
@@ -30,8 +29,8 @@ public class OrderItemEntity {
     BigDecimal unitPrice;
     BigDecimal amount;
 
-    public static OrderItemEntity from(OrderItem orderItem) {
-        return OrderItemEntity.builder()
+    public static OrderItemRow from(OrderItem orderItem) {
+        return OrderItemRow.builder()
                 .sortPosition(orderItem.getSortPosition())
                 .description(orderItem.getDescription())
                 .quantity(orderItem.getQuantity())
