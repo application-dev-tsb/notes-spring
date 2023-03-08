@@ -14,3 +14,8 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
+
+  dynamodb:
+    image: 'amazon/dynamodb-local'
+    ports:
+      - "8000:8000"
