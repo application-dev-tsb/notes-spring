@@ -20,7 +20,7 @@ public class DynamoDBIndexCreator implements ApplicationListener<ContextRefreshe
 
     @Override
     public void onApplicationEvent(ContextRefreshedEvent event) {
-        String tableName = "test_123";
+        String tableName = "orders";
 
         log.info("Creating Table...{}", tableName);
 
@@ -59,5 +59,6 @@ public class DynamoDBIndexCreator implements ApplicationListener<ContextRefreshe
                 .build();
 
         client.createTable(createTableRequest);
+        log.info("Migration Completed...");
     }
 }
